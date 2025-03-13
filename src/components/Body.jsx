@@ -7,6 +7,7 @@ import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { loginUser } from '../utils/userSlice'
 import { BASE_URL } from '../utils/constant'
+import { Toaster } from 'react-hot-toast'
 
 function Body() {
   const dispatch = useDispatch()
@@ -33,6 +34,7 @@ function Body() {
   return (
     <div>
         <Navebar/>
+        <Toaster />
         <Outlet/>
         <Footer/>
     </div>

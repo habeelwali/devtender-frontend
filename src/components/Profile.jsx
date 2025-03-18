@@ -97,7 +97,10 @@ const ProfilePage = () => {
     <div className="flex flex-col items-center p-6">
       {/* Profile Info */}
       <div className="bg-base-100 border border-gray-500 shadow-lg p-6 rounded-lg w-96 text-center">
-      <div className="relative">
+      <div className="flex  justify-center ">
+        <div className="relative w-28 ">
+
+        
         <img
           src={userData?.photoUrl?.imageUrl || "https://via.placeholder.com/100"}
           alt="Profile"
@@ -105,7 +108,7 @@ const ProfilePage = () => {
         />
 
         {/* Edit Icon */}
-        <label className="absolute bottom-0 right-0 bg-gray-700 p-2 rounded-full cursor-pointer">
+        <label className="absolute bottom-0 right-0 w-8 h-8  bg-gray-700 border  rounded-full cursor-pointer">
           <input
             type="file"
             accept="image/*"
@@ -115,6 +118,7 @@ const ProfilePage = () => {
           />
           <span className="text-white text-sm">📷</span>
         </label>
+        </div>
       </div>
         <h2 className="text-xl font-semibold mt-2">{userData.firstname} {userData.lastname}</h2>
         <p className="text-gray-300">{userData.email}</p>
